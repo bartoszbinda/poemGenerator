@@ -130,5 +130,13 @@ namespace WpfApplication1
             }
 
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            var win2 = new SaveWindow();;
+            win2.Show();
+            this.Close();
+
+        }
     }
 }

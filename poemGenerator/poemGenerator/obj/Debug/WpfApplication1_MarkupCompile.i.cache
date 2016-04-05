@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\user\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\obj\Debug\
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\
 WpfApplication1
 none
 false
 DEBUG;TRACE
-C:\Users\user\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\App.xaml
-11151548125
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\App.xaml
+2-612280565
 
-91697599603
+101014577993
 13738642453
-MainWindow.xaml;
+MainWindow.xaml;SaveWindow.xaml;
 
-True
+False
 

@@ -8,22 +8,23 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <RichTextBox x:Name="inputPoem" HorizontalAlignment="Left" Height="145" VerticalAlignment="Top" Width="302" Margin="0,55,0,0" TextChanged="richTextBox_TextChanged">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text="RichTextBox"/>
-                </Paragraph>
-            </FlowDocument>
+            <FlowDocument/>
         </RichTextBox>
         <Menu x:Name="menu" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="508" Margin="-1,0,0,0">
             <MenuItem Header="File">
                 <MenuItem Header="Save"/>
                 <MenuItem Header="Open" />
             </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Add to Dictionary" Click="MenuItem_Click">
+                    
+                </MenuItem>
+            </MenuItem>
         </Menu>
         <RichTextBox x:Name="outputPoem" HorizontalAlignment="Left" Height="145" Margin="336,55,0,0" VerticalAlignment="Top" Width="156" TextChanged="outputPoem_TextChanged">
             <FlowDocument>
                 <Paragraph>
-                    <Run Text="RichTextBox"/>
+                    <Run Text=""/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
