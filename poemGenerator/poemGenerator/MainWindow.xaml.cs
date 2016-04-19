@@ -104,10 +104,12 @@ namespace WpfApplication1
             {
                 for (var i = 0; i < line.Length; i++)
                 {
+                    
+
                     if (line[i] == '#')
                     {
-                        var temp = i;
                         i = i + 1;
+
                         if (line[i] == 'N')
                         {
                             int r = rnd.Next(nouns.Count);
@@ -124,17 +126,21 @@ namespace WpfApplication1
                             int r = rnd.Next(verbs.Count);
                             outputPoem.AppendText((string) verbs[r] + " ");
                         }
-                        else if (line[i] != 'V' || line[i] != 'A' || line[i] != 'N')
+
+                        else if (line[i - 1] == '#' && (line[i] == 'V' || line[i] == 'A' || line[i] == 'N'))
                         {
-                            outputPoem.AppendText(line[i].ToString());
+
                         }
-                        i = temp;
+
+                        
+
                     }
                     else
                     {
                         outputPoem.AppendText(line[i].ToString());
                     }
-                    
+
+
                 }
             }
 
