@@ -162,7 +162,7 @@ namespace WpfApplication1
 
             inputPoem.Visibility = Visibility.Hidden;
             outputPoem.Visibility = Visibility.Hidden;
-            generate.Visibility = Visibility.Hidden;
+            GeneratePoem.Visibility = Visibility.Hidden;
             AddToDictionary.Visibility = Visibility.Visible;
             option.Visibility = Visibility.Visible;
             appendToDictionary.Visibility = Visibility.Visible;
@@ -172,7 +172,7 @@ namespace WpfApplication1
         {
             inputPoem.Visibility = Visibility.Visible;
             outputPoem.Visibility = Visibility.Visible;
-            generate.Visibility = Visibility.Visible;
+            GeneratePoem.Visibility = Visibility.Visible;
             AddToDictionary.Visibility = Visibility.Hidden;
             option.Visibility = Visibility.Hidden;
             appendToDictionary.Visibility = Visibility.Hidden;
@@ -236,6 +236,63 @@ namespace WpfApplication1
         private void MenuItem_Click_4(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void MenuItem_Click_5(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_Click_1(object sender, RoutedEventArgs e)
+        {
+            outputPoem.Document.Blocks.Clear();
+            Random rnd = new Random();
+            inputPoem.SelectAll();
+            string[] lines = inputPoem.Selection.Text.Split('\n');
+            foreach (string line in lines)
+            {
+                for (var i = 0; i < line.Length; i++)
+                {
+
+
+                    if (line[i] == '#')
+                    {
+                        i = i + 1;
+
+                        if (line[i] == 'N')
+                        {
+                            int r = rnd.Next(nouns.Count);
+
+                            outputPoem.AppendText((string)nouns[r] + " ");
+                        }
+                        else if (line[i] == 'A')
+                        {
+                            int r = rnd.Next(adjectives.Count);
+                            outputPoem.AppendText((string)adjectives[r] + " ");
+                        }
+                        else if (line[i] == 'V')
+                        {
+                            int r = rnd.Next(verbs.Count);
+                            outputPoem.AppendText((string)verbs[r] + " ");
+                        }
+
+                        else if (line[i - 1] == '#' && (line[i] == 'V' || line[i] == 'A' || line[i] == 'N'))
+                        {
+
+                        }
+
+
+
+                    }
+                    else
+                    {
+                        outputPoem.AppendText(line[i].ToString());
+                    }
+
+
+                }
+            }
+
         }
     }
 
