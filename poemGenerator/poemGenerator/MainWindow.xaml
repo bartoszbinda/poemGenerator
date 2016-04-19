@@ -7,28 +7,32 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <RichTextBox x:Name="inputPoem" HorizontalAlignment="Left" Height="145" VerticalAlignment="Top" Width="302" Margin="0,55,0,0" TextChanged="richTextBox_TextChanged">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250*"/>
+            <ColumnDefinition Width="267*"/>
+        </Grid.ColumnDefinitions>
+        <RichTextBox x:Name="inputPoem" HorizontalAlignment="Left" Height="145" VerticalAlignment="Top" Width="302" Margin="0,55,0,0" TextChanged="richTextBox_TextChanged" Grid.ColumnSpan="2">
             <FlowDocument/>
         </RichTextBox>
-        <Menu x:Name="menu" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="508" Margin="-1,0,0,0">
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="518" Margin="-1,0,0,0" Grid.ColumnSpan="2">
             <MenuItem Header="File">
                 <MenuItem Header="Save"/>
                 <MenuItem Header="Open" />
             </MenuItem>
             <MenuItem Header="Edit">
                 <MenuItem Header="Add to Dictionary" Click="MenuItem_Click">
-                    
+
                 </MenuItem>
             </MenuItem>
         </Menu>
-        <RichTextBox x:Name="outputPoem" HorizontalAlignment="Left" Height="145" Margin="336,55,0,0" VerticalAlignment="Top" Width="156" TextChanged="outputPoem_TextChanged">
+        <RichTextBox x:Name="outputPoem" HorizontalAlignment="Left" Height="145" Margin="86,55,0,0" VerticalAlignment="Top" Width="156" TextChanged="outputPoem_TextChanged" Grid.Column="1">
             <FlowDocument>
                 <Paragraph>
                     <Run Text=""/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <Button x:Name="generate" Content="Generate Poem!" HorizontalAlignment="Left" Height="45" Margin="145,238,0,0" VerticalAlignment="Top" Width="157" Click="button_Click"/>
+        <Button x:Name="generate" Content="Generate Poem!" HorizontalAlignment="Left" Height="45" Margin="145,238,0,0" VerticalAlignment="Top" Width="157" Click="button_Click" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

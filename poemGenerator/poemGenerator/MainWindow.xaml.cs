@@ -112,19 +112,23 @@ namespace WpfApplication1
                         {
                             int r = rnd.Next(nouns.Count);
 
-                            outputPoem.AppendText((string)nouns[r] + " ");
+                            outputPoem.AppendText((string) nouns[r] + " ");
                         }
                         else if (line[i] == 'A')
                         {
                             int r = rnd.Next(adjectives.Count);
-                            outputPoem.AppendText((string)adjectives[r] + " ");
+                            outputPoem.AppendText((string) adjectives[r] + " ");
                         }
                         else if (line[i] == 'V')
                         {
                             int r = rnd.Next(verbs.Count);
-                            outputPoem.AppendText((string)verbs[r] + " ");
+                            outputPoem.AppendText((string) verbs[r] + " ");
                         }
                         i = temp;
+                    }
+                    else
+                    {
+                        outputPoem.AppendText(line);
                     }
                 }
             }
