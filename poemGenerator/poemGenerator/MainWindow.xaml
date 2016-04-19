@@ -27,7 +27,11 @@
         <Menu x:Name="menu" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="818" Margin="-1,0,0,0" Grid.ColumnSpan="2">
             <MenuItem Header="File">
                 <MenuItem Header="New Script" Click="MenuItem_Click_2"/>
+                <MenuItem Header="Open Script" />
+                <MenuItem Header="Save Script"/>
+                <MenuItem Header="Quit" Click="MenuItem_Click_4"></MenuItem>
             </MenuItem>
+
             <MenuItem Header="Edit">
                 <MenuItem Header="Add to Dictionary" Click="MenuItem_Click" />
                 <MenuItem Header="Generate Poem" Click="MenuItem_Click_1"/>

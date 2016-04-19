@@ -232,6 +232,11 @@ namespace WpfApplication1
         {
 
         }
+
+        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 
 }
