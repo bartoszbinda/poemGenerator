@@ -47,11 +47,16 @@ namespace WpfApplication1
             foreach (string s in readText)
             {
                 var arr = s.Split(' ');
-                foreach(string substring in arr)
+                foreach (string substring in arr)
                 {
-                    nouns.Add(substring);
+                    if (!string.IsNullOrEmpty(substring))
+                    {
+                        nouns.Add(substring);
+                    }
                 }
+
             }
+            
 
         }
         private void ReadAdjectives()
@@ -63,7 +68,10 @@ namespace WpfApplication1
                 var arr = s.Split(' ');
                 foreach (string substring in arr)
                 {
-                   adjectives.Add(substring);
+                    if (!string.IsNullOrEmpty(substring))
+                    {
+                        adjectives.Add(substring);
+                    }
                 }
             }
         }
@@ -76,7 +84,10 @@ namespace WpfApplication1
                 var arr = s.Split(' ');
                 foreach (string substring in arr)
                 {
-                    verbs.Add(substring);
+                    if (!string.IsNullOrEmpty(substring))
+                    {
+                        verbs.Add(substring);
+                    }
                 }
             }
 
