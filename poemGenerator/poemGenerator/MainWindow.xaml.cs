@@ -126,10 +126,7 @@ namespace WpfApplication1
                         }
                         i = temp;
                     }
-                    else
-                    {
-                        outputPoem.AppendText(line);
-                    }
+                   
                 }
             }
 
@@ -137,10 +134,69 @@ namespace WpfApplication1
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            var win2 = new SaveWindow();;
-            win2.Show();
-            this.Close();
+
+            inputPoem.Visibility = Visibility.Hidden;
+            outputPoem.Visibility = Visibility.Hidden;
+            generate.Visibility = Visibility.Hidden;
+            AddToDictionary.Visibility = Visibility.Visible;
+            option.Visibility = Visibility.Visible;
+            appendToDictionary.Visibility = Visibility.Visible;
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            inputPoem.Visibility = Visibility.Visible;
+            outputPoem.Visibility = Visibility.Visible;
+            generate.Visibility = Visibility.Visible;
+            AddToDictionary.Visibility = Visibility.Hidden;
+            option.Visibility = Visibility.Hidden;
+            appendToDictionary.Visibility = Visibility.Hidden;
 
         }
+
+        private void appendToDictionary_Click(object sender, RoutedEventArgs e)
+        {
+            if (option.Text == "Noun")
+            {
+
+
+                AddToDictionary.SelectAll();
+
+                var lines = AddToDictionary.Selection.Text.Split('\n');
+
+                foreach (string line in lines)
+                {
+                    if (line != null) File.AppendAllText("text\\noun.txt", line);
+                }
+
+            }
+            else if (option.Text == "Verb")
+            {
+
+                AddToDictionary.SelectAll();
+
+                var lines = AddToDictionary.Selection.Text.Split('\n');
+
+                foreach (string line in lines)
+                {
+                    if (line != null) File.AppendAllText("text\\verb.txt", line);
+                }
+
+
+            }
+            else if (option.Text == "Adjective")
+            {
+
+                AddToDictionary.SelectAll();
+
+                var lines = AddToDictionary.Selection.Text.Split('\n');
+
+                foreach (string line in lines)
+                {
+                    if (line != null) File.AppendAllText("text\\adjective.txt", line);
+                }
+            }
+        }
     }
+
 }
