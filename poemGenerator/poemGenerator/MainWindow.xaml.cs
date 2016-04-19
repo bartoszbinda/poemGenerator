@@ -205,6 +205,16 @@ namespace WpfApplication1
                 }
             }
         }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            inputPoem.Document.Blocks.Clear();
+        }
+
+        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
 }

@@ -1,0 +1,15 @@
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\bin\Release\WpfApplication1.exe.config
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\bin\Release\WpfApplication1.exe
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\bin\Release\WpfApplication1.pdb
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Release\MainWindow.g.cs
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Release\SaveWindow.g.cs
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Release\App.g.cs
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Release\WpfApplication1_MarkupCompile.cache
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Release\WpfApplication1_MarkupCompile.lref
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Release\MainWindow.baml
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Release\SaveWindow.baml
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Release\WpfApplication1.g.resources
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Release\WpfApplication1.Properties.Resources.resources
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Release\poemGenerator.csproj.GenerateResource.Cache
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Release\WpfApplication1.exe
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Release\WpfApplication1.pdb
