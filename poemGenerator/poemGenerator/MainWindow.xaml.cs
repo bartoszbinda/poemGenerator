@@ -124,9 +124,17 @@ namespace WpfApplication1
                             int r = rnd.Next(verbs.Count);
                             outputPoem.AppendText((string) verbs[r] + " ");
                         }
+                        else if (line[i] != 'V' || line[i] != 'A' || line[i] != 'N')
+                        {
+                            outputPoem.AppendText(line[i].ToString());
+                        }
                         i = temp;
                     }
-                   
+                    else
+                    {
+                        outputPoem.AppendText(line[i].ToString());
+                    }
+                    
                 }
             }
 

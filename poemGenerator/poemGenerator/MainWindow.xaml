@@ -24,7 +24,7 @@
                 <Paragraph/>
             </FlowDocument>
         </RichTextBox>
-        <Menu x:Name="menu" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="518" Margin="-1,0,0,0" Grid.ColumnSpan="2">
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="818" Margin="-1,0,0,0" Grid.ColumnSpan="2">
             <MenuItem Header="File">
                 <MenuItem Header="Save"/>
                 <MenuItem Header="Open" />
