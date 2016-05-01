@@ -41,6 +41,12 @@ namespace WpfApplication1
             ReadVerbs();
 
         }
+        private void SaveScript(string filename)
+        {
+            TextRange t = new TextRange(InputPoem.Document.ContentStart,
+                                     InputPoem.Document.ContentEnd);
+            File.WriteAllText(filename, t.Text);
+        }
         private void ReadScript(string filename)
         {
             string[] ScriptText = File.ReadAllLines(filename);
@@ -309,6 +315,17 @@ namespace WpfApplication1
 
                 }
             }
+
+        }
+
+        private void MenuItem_Click_6(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog SaveScriptDialog = new SaveFileDialog();
+            SaveScriptDialog.DefaultExt = ".txt";
+            SaveScriptDialog.Filter = "Text document  (*.txt)|*.txt";
+            SaveScriptDialog.ShowDialog();
+            var filename = SaveScriptDialog.FileName;
+            SaveScript(filename);
 
         }
     }
