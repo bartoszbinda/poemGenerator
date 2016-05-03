@@ -1,16 +1,16 @@
-C:\Users\Bartek\poemGenerator\poemGenerator\poemGenerator\bin\Debug\WpfApplication1.exe.config
-C:\Users\Bartek\poemGenerator\poemGenerator\poemGenerator\bin\Debug\WpfApplication1.exe
-C:\Users\Bartek\poemGenerator\poemGenerator\poemGenerator\bin\Debug\WpfApplication1.pdb
-C:\Users\Bartek\poemGenerator\poemGenerator\poemGenerator\obj\Debug\poemGenerator.csprojResolveAssemblyReference.cache
-C:\Users\Bartek\poemGenerator\poemGenerator\poemGenerator\obj\Debug\MainWindow.g.cs
-C:\Users\Bartek\poemGenerator\poemGenerator\poemGenerator\obj\Debug\SaveWindow.g.cs
-C:\Users\Bartek\poemGenerator\poemGenerator\poemGenerator\obj\Debug\App.g.cs
-C:\Users\Bartek\poemGenerator\poemGenerator\poemGenerator\obj\Debug\WpfApplication1_MarkupCompile.cache
-C:\Users\Bartek\poemGenerator\poemGenerator\poemGenerator\obj\Debug\WpfApplication1_MarkupCompile.lref
-C:\Users\Bartek\poemGenerator\poemGenerator\poemGenerator\obj\Debug\MainWindow.baml
-C:\Users\Bartek\poemGenerator\poemGenerator\poemGenerator\obj\Debug\SaveWindow.baml
-C:\Users\Bartek\poemGenerator\poemGenerator\poemGenerator\obj\Debug\WpfApplication1.g.resources
-C:\Users\Bartek\poemGenerator\poemGenerator\poemGenerator\obj\Debug\WpfApplication1.Properties.Resources.resources
-C:\Users\Bartek\poemGenerator\poemGenerator\poemGenerator\obj\Debug\poemGenerator.csproj.GenerateResource.Cache
-C:\Users\Bartek\poemGenerator\poemGenerator\poemGenerator\obj\Debug\WpfApplication1.exe
-C:\Users\Bartek\poemGenerator\poemGenerator\poemGenerator\obj\Debug\WpfApplication1.pdb
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\bin\Debug\WpfApplication1.exe.config
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\bin\Debug\WpfApplication1.exe
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\bin\Debug\WpfApplication1.pdb
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\poemGenerator.csprojResolveAssemblyReference.cache
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\MainWindow.g.cs
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\SaveWindow.g.cs
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\App.g.cs
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\WpfApplication1_MarkupCompile.cache
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\WpfApplication1_MarkupCompile.lref
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\MainWindow.baml
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\SaveWindow.baml
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\WpfApplication1.g.resources
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\WpfApplication1.Properties.Resources.resources
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\poemGenerator.csproj.GenerateResource.Cache
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\WpfApplication1.exe
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\WpfApplication1.pdb

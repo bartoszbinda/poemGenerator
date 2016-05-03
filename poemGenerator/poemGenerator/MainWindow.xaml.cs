@@ -320,9 +320,11 @@ namespace WpfApplication1
 
         private void MenuItem_Click_6(object sender, RoutedEventArgs e)
         {
-            SaveFileDialog SaveScriptDialog = new SaveFileDialog();
-            SaveScriptDialog.DefaultExt = ".txt";
-            SaveScriptDialog.Filter = "Text document  (*.txt)|*.txt";
+            SaveFileDialog SaveScriptDialog = new SaveFileDialog
+            {
+                DefaultExt = ".txt",
+                Filter = "Text document  (*.txt)|*.txt"
+            };
             SaveScriptDialog.ShowDialog();
             var filename = SaveScriptDialog.FileName;
             SaveScript(filename);
