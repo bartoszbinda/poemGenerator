@@ -64,7 +64,7 @@
             <ComboBoxItem x:Name="A" Content="Adjective"/>
             <ComboBoxItem x:Name="V" Content="Verb"/>
         </ComboBox>
-        <RichTextBox x:Name="AddToDictionary" HorizontalAlignment="Left" Height="257" Margin="31,92,0,0" VerticalAlignment="Top" Width="739" Grid.ColumnSpan="2" Visibility="Hidden">
+        <RichTextBox x:Name="AddToDictionary" HorizontalAlignment="Left" Height="257" Margin="31,92,0,0" VerticalAlignment="Top" Width="739" Grid.ColumnSpan="2" Visibility="Hid">
             <FlowDocument>
                 <Paragraph>
 
