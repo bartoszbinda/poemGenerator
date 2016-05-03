@@ -11,7 +11,7 @@
             <ColumnDefinition Width="250*"/>
             <ColumnDefinition Width="267*"/>
         </Grid.ColumnDefinitions>
-        <RichTextBox x:Name="inputPoem" HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="371" Margin="13,61,0,0" TextChanged="richTextBox_TextChanged" RenderTransformOrigin="60,1" BorderBrush="#FFCDCBCB" SelectionBrush="#FFFBD6FF">
+        <RichTextBox x:Name="InputPoem" HorizontalAlignment="Left" Height="226" VerticalAlignment="Top" Width="371" Margin="13,61,0,0" TextChanged="richTextBox_TextChanged" RenderTransformOrigin="60,1" BorderBrush="#FFCDCBCB" SelectionBrush="#FFFBD6FF">
             <RichTextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -43,7 +43,7 @@
                 </MenuItem.Effect>
                 <MenuItem Header="New Script" Click="MenuItem_Click_2"/>
                 <MenuItem Header="Open Script" Click="MenuItem_Click_5" />
-                <MenuItem Header="Save Script"/>
+                <MenuItem Header="Save Script" Click="MenuItem_Click_6"/>
                 <MenuItem Header="Quit" Click="MenuItem_Click_4"></MenuItem>
             </MenuItem>
 

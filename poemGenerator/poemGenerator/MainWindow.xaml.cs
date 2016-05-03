@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -25,7 +26,7 @@ namespace WpfApplication1
         public ArrayList nouns = new ArrayList();
         public ArrayList verbs = new ArrayList();
         public ArrayList adjectives = new ArrayList();
-       
+
 
 
         public MainWindow()
@@ -38,6 +39,21 @@ namespace WpfApplication1
             ReadAdjectives();
             ReadNouns();
             ReadVerbs();
+
+        }
+        private void SaveScript(string filename)
+        {
+            TextRange t = new TextRange(InputPoem.Document.ContentStart,
+                                     InputPoem.Document.ContentEnd);
+            File.WriteAllText(filename, t.Text);
+        }
+        private void ReadScript(string filename)
+        {
+            string[] ScriptText = File.ReadAllLines(filename);
+            foreach (string line in ScriptText)
+            {
+                InputPoem.AppendText(line);
+            }
 
         }
         private void ReadNouns()
@@ -56,7 +72,7 @@ namespace WpfApplication1
                 }
 
             }
-            
+
 
         }
         private void ReadAdjectives()
@@ -96,8 +112,8 @@ namespace WpfApplication1
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
-            
-            
+
+
         }
 
         private void outputPoem_TextChanged(object sender, TextChangedEventArgs e)
@@ -109,13 +125,13 @@ namespace WpfApplication1
         {
             outputPoem.Document.Blocks.Clear();
             Random rnd = new Random();
-            inputPoem.SelectAll();
-            string[] lines = inputPoem.Selection.Text.Split('\n');
+            InputPoem.SelectAll();
+            string[] lines = InputPoem.Selection.Text.Split('\n');
             foreach (string line in lines)
             {
                 for (var i = 0; i < line.Length; i++)
                 {
-                    
+
 
                     if (line[i] == '#')
                     {
@@ -125,17 +141,17 @@ namespace WpfApplication1
                         {
                             int r = rnd.Next(nouns.Count);
 
-                            outputPoem.AppendText((string) nouns[r] + " ");
+                            outputPoem.AppendText((string)nouns[r] + " ");
                         }
                         else if (line[i] == 'A')
                         {
                             int r = rnd.Next(adjectives.Count);
-                            outputPoem.AppendText((string) adjectives[r] + " ");
+                            outputPoem.AppendText((string)adjectives[r] + " ");
                         }
                         else if (line[i] == 'V')
                         {
                             int r = rnd.Next(verbs.Count);
-                            outputPoem.AppendText((string) verbs[r] + " ");
+                            outputPoem.AppendText((string)verbs[r] + " ");
                         }
 
                         else if (line[i - 1] == '#' && (line[i] == 'V' || line[i] == 'A' || line[i] == 'N'))
@@ -143,7 +159,7 @@ namespace WpfApplication1
 
                         }
 
-                        
+
 
                     }
                     else
@@ -160,7 +176,7 @@ namespace WpfApplication1
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
 
-            inputPoem.Visibility = Visibility.Hidden;
+            InputPoem.Visibility = Visibility.Hidden;
             outputPoem.Visibility = Visibility.Hidden;
             GeneratePoem.Visibility = Visibility.Hidden;
             AddToDictionary.Visibility = Visibility.Visible;
@@ -170,7 +186,7 @@ namespace WpfApplication1
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            inputPoem.Visibility = Visibility.Visible;
+            InputPoem.Visibility = Visibility.Visible;
             outputPoem.Visibility = Visibility.Visible;
             GeneratePoem.Visibility = Visibility.Visible;
             AddToDictionary.Visibility = Visibility.Hidden;
@@ -225,7 +241,7 @@ namespace WpfApplication1
 
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
-            inputPoem.Document.Blocks.Clear();
+            InputPoem.Document.Blocks.Clear();
         }
 
         private void MenuItem_Click_3(object sender, RoutedEventArgs e)
@@ -235,11 +251,18 @@ namespace WpfApplication1
 
         private void MenuItem_Click_4(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            System.Windows.Application.Current.Shutdown();
         }
 
         private void MenuItem_Click_5(object sender, RoutedEventArgs e)
         {
+            OpenFileDialog NewScript = new OpenFileDialog();
+            NewScript.DefaultExt = ".txt";
+            NewScript.Filter = "Text document  (*.txt)|*.txt";
+            NewScript.ShowDialog();
+            var filename = NewScript.FileName;
+            ReadScript(filename);
+
 
         }
 
@@ -247,8 +270,8 @@ namespace WpfApplication1
         {
             outputPoem.Document.Blocks.Clear();
             Random rnd = new Random();
-            inputPoem.SelectAll();
-            string[] lines = inputPoem.Selection.Text.Split('\n');
+            InputPoem.SelectAll();
+            string[] lines = InputPoem.Selection.Text.Split('\n');
             foreach (string line in lines)
             {
                 for (var i = 0; i < line.Length; i++)
@@ -292,6 +315,17 @@ namespace WpfApplication1
 
                 }
             }
+
+        }
+
+        private void MenuItem_Click_6(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog SaveScriptDialog = new SaveFileDialog();
+            SaveScriptDialog.DefaultExt = ".txt";
+            SaveScriptDialog.Filter = "Text document  (*.txt)|*.txt";
+            SaveScriptDialog.ShowDialog();
+            var filename = SaveScriptDialog.FileName;
+            SaveScript(filename);
 
         }
     }
