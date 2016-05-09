@@ -171,9 +171,11 @@ namespace PoemGenerator
 
         private void OpenScriptMenuItemClick5(object sender, RoutedEventArgs e)
         {
-            var newScript = new OpenFileDialog();
-            newScript.DefaultExt = ".txt";
-            newScript.Filter = "Text document  (*.txt)|*.txt";
+            var newScript = new OpenFileDialog
+            {
+                DefaultExt = ".txt",
+                Filter = "Text document  (*.txt)|*.txt"
+            };
             newScript.ShowDialog();
             var filename = newScript.FileName;
             ReadScript(filename);
