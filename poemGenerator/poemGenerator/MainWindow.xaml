@@ -41,15 +41,15 @@
                 <MenuItem.Effect>
                     <BlurEffect Radius="1"/>
                 </MenuItem.Effect>
-                <MenuItem Header="New Script" Click="MenuItem_Click_2"/>
-                <MenuItem Header="Open Script" Click="MenuItem_Click_5" />
-                <MenuItem Header="Save Script" Click="MenuItem_Click_6"/>
-                <MenuItem Header="Quit" Click="MenuItem_Click_4"></MenuItem>
+                <MenuItem Header="New Script" Click="NewScriptMenuItemClick2"/>
+                <MenuItem Header="Open Script" Click="OpenScriptMenuItemClick5" />
+                <MenuItem Header="Save Script" Click="SaveScriptMenuItemClick6"/>
+                <MenuItem Header="Quit" Click="QuitMenuItemClick4"></MenuItem>
             </MenuItem>
 
             <MenuItem Header="Edit" FontFamily="Perpetua" BorderThickness="1,0,0,0" BorderBrush="Gainsboro" FontStyle="Italic">
-                <MenuItem Header="Add to Dictionary" Click="MenuItem_Click" />
-                <MenuItem Header="Generate Poem" Click="MenuItem_Click_1"/>
+                <MenuItem Header="Add to Dictionary" Click="AddToDictionaryMenuItemClick" />
+                <MenuItem Header="Generate Poem" Click="GeneratePoemItemClick1"/>
             </MenuItem>
         </Menu>
         <RichTextBox x:Name="OutputPoem" HorizontalAlignment="Left" Height="226" Margin="10,60,0,0" VerticalAlignment="Top" Width="371" Grid.Column="1" BorderBrush="#FFD6D6D6" SelectionBrush="#FFFBD6FF" FontFamily="Palatino Linotype" FontStyle="Italic">

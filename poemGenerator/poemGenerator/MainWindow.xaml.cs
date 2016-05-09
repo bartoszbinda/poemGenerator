@@ -3,8 +3,7 @@ using System.Collections;
 using System.IO;
 using System.Windows;
 using System.Windows.Documents;
-using System.Windows.Forms;
-using Application = System.Windows.Application;
+using Microsoft.Win32;
 
 namespace PoemGenerator
 {
@@ -13,8 +12,8 @@ namespace PoemGenerator
     /// </summary>
     public partial class MainWindow
     {
+        private readonly Random _random = new Random();
         private ArrayList _nouns, _verbs, _adverbs, _prepositions, _adjectives, _tempnouns;
-        private Random random = new Random();
 
         public MainWindow()
         {
@@ -48,7 +47,7 @@ namespace PoemGenerator
             }
         }
 
-        private ArrayList ReadWords(string filePath)
+        private static ArrayList ReadWords(string filePath)
         {
             var wordsForDictionary = new ArrayList();
             var readText = File.ReadAllLines(filePath);
@@ -66,7 +65,7 @@ namespace PoemGenerator
             return wordsForDictionary;
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void AddToDictionaryMenuItemClick(object sender, RoutedEventArgs e)
         {
             InputPoem.Visibility = Visibility.Hidden;
             OutputPoem.Visibility = Visibility.Hidden;
@@ -76,7 +75,7 @@ namespace PoemGenerator
             AppendToDictionary.Visibility = Visibility.Visible;
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        private void GeneratePoemItemClick1(object sender, RoutedEventArgs e)
         {
             InputPoem.Visibility = Visibility.Visible;
             OutputPoem.Visibility = Visibility.Visible;
@@ -160,17 +159,17 @@ namespace PoemGenerator
             }
         }
 
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        private void NewScriptMenuItemClick2(object sender, RoutedEventArgs e)
         {
             InputPoem.Document.Blocks.Clear();
         }
 
-        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
+        private void QuitMenuItemClick4(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
-        private void MenuItem_Click_5(object sender, RoutedEventArgs e)
+        private void OpenScriptMenuItemClick5(object sender, RoutedEventArgs e)
         {
             var newScript = new OpenFileDialog();
             newScript.DefaultExt = ".txt";
@@ -183,7 +182,6 @@ namespace PoemGenerator
         private void GeneratePoemButtonClick1(object sender, RoutedEventArgs e)
         {
             OutputPoem.Document.Blocks.Clear();
-            var random = new Random();
             InputPoem.SelectAll();
             var lines = InputPoem.Selection.Text.Split('\n');
             foreach (var line in lines)
@@ -193,44 +191,53 @@ namespace PoemGenerator
                     if (line[i] == '#')
                     {
                         i = i + 1;
+                        switch (line[i])
+                        {
+                            case 'N':
+                                {
+                                    var r = _random.Next(_nouns.Count);
 
-
-                        if (line[i] == 'N')
-                        {
-                            var r = random.Next(_nouns.Count);
-
-                            OutputPoem.AppendText((string) _nouns[r] + " ");
-                        }
-                        else if (line[i] == 'A')
-                        {
-                            var r = random.Next(_adjectives.Count);
-                            OutputPoem.AppendText((string) _adjectives[r] + " ");
-                        }
-                        else if (line[i] == 'V')
-                        {
-                            var r = random.Next(_verbs.Count);
-                            OutputPoem.AppendText((string) _verbs[r] + " ");
-                        }
-                        else if (line[i] == 'D')
-                        {
-                            var r = random.Next(_adverbs.Count);
-                            OutputPoem.AppendText((string) _adverbs[r] + " ");
-                        }
-                        else if (line[i] == 'P')
-                        {
-                            var r = random.Next(_prepositions.Count);
-                            OutputPoem.AppendText((string) _prepositions[r] + " ");
-                        }
-                        else if (line[i] == 'T')
-                        {
-                            var r = random.Next(_tempnouns.Count);
-                            OutputPoem.AppendText((string) _tempnouns[r] + " ");
-                        }
-
-                        else if (line[i - 1] == '#' &&
-                                 (line[i] == 'V' || line[i] == 'A' || line[i] == 'N' || line[i] == 'D' || line[i] == 'P' ||
-                                  line[i] == 'T'))
-                        {
+                                    OutputPoem.AppendText((string)_nouns[r] + " ");
+                                }
+                                break;
+                            case 'A':
+                                {
+                                    var r = _random.Next(_adjectives.Count);
+                                    OutputPoem.AppendText((string)_adjectives[r] + " ");
+                                }
+                                break;
+                            case 'V':
+                                {
+                                    var r = _random.Next(_verbs.Count);
+                                    OutputPoem.AppendText((string)_verbs[r] + " ");
+                                }
+                                break;
+                            case 'D':
+                                {
+                                    var r = _random.Next(_adverbs.Count);
+                                    OutputPoem.AppendText((string)_adverbs[r] + " ");
+                                }
+                                break;
+                            case 'P':
+                                {
+                                    var r = _random.Next(_prepositions.Count);
+                                    OutputPoem.AppendText((string)_prepositions[r] + " ");
+                                }
+                                break;
+                            case 'T':
+                                {
+                                    var r = _random.Next(_tempnouns.Count);
+                                    OutputPoem.AppendText((string)_tempnouns[r] + " ");
+                                }
+                                break;
+                            default:
+                                if (line[i - 1] == '#' &&
+                                    (line[i] == 'V' || line[i] == 'A' || line[i] == 'N' || line[i] == 'D' ||
+                                     line[i] == 'P' ||
+                                     line[i] == 'T'))
+                                {
+                                }
+                                break;
                         }
                     }
                     else
@@ -241,7 +248,7 @@ namespace PoemGenerator
             }
         }
 
-        private void MenuItem_Click_6(object sender, RoutedEventArgs e)
+        private void SaveScriptMenuItemClick6(object sender, RoutedEventArgs e)
         {
             var saveScriptDialog = new SaveFileDialog
             {
