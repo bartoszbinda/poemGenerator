@@ -1,0 +1,35 @@
+quietly
+without sound
+kwI-et-lE
+sound,    soundless,    stealth
+ 1
+thus
+therefore
+thus
+therefore,    thus
+ 1
+practically
+pretty much
+prak-tik-awl-E
+practical,    almost
+ 1
+crosswise
+across
+kraws-wIs
+cross,    religious,    geometry
+ 1
+forever
+always
+fOr-ev-ur
+temporal,    infinity,    always,    forever
+ 2
+twice
+two times
+twIs
+two,   double,   number
+ 1
+silently
+without sound
+sI-lent-lE
+aural,  sound,  negative,  negation
+ 1

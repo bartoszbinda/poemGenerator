@@ -135,7 +135,7 @@ namespace WpfApplication1 {
             switch (connectionId)
             {
             case 1:
-            this.menu = ((System.Windows.Controls.Menu)(target));
+            this.Menu = ((System.Windows.Controls.Menu)(target));
             return;
             case 2:
             
@@ -155,13 +155,13 @@ namespace WpfApplication1 {
             #line hidden
             return;
             case 4:
-            this.richTextBox = ((System.Windows.Controls.RichTextBox)(target));
+            this.RichTextBox = ((System.Windows.Controls.RichTextBox)(target));
             return;
             case 5:
-            this.option = ((System.Windows.Controls.ComboBox)(target));
+            this.Option = ((System.Windows.Controls.ComboBox)(target));
             
             #line 38 "..\..\SaveWindow.xaml"
-            this.option.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.comboBox_SelectionChanged);
+            this.Option.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.comboBox_SelectionChanged);
             
             #line default
             #line hidden
@@ -176,10 +176,10 @@ namespace WpfApplication1 {
             this.V = ((System.Windows.Controls.ComboBoxItem)(target));
             return;
             case 9:
-            this.appendToDictionary = ((System.Windows.Controls.Button)(target));
+            this.AppendToDictionary = ((System.Windows.Controls.Button)(target));
             
             #line 43 "..\..\SaveWindow.xaml"
-            this.appendToDictionary.Click += new System.Windows.RoutedEventHandler(this.appendToDictionary_Click);
+            this.AppendToDictionary.Click += new System.Windows.RoutedEventHandler(this.appendToDictionary_Click);
             
             #line default
             #line hidden
