@@ -11,3 +11,5 @@ C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGe
 C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\poemGenerator.csproj.GenerateResource.Cache
 C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\WpfApplication1.exe
 C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\WpfApplication1.pdb
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\bin\Debug\System.Windows.Forms.dll
+C:\Users\bimbokikotek\Documents\Visual Studio 2015\Projects\poemGenerator\poemGenerator\poemGenerator\obj\Debug\poemGenerator.csprojResolveAssemblyReference.cache

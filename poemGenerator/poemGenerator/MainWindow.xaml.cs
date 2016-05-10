@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows;
 using System.Windows.Documents;
@@ -33,6 +34,7 @@ namespace PoemGenerator
 
         private void SaveScript(string filename)
         {
+            if (string.IsNullOrEmpty(filename)) return;
             var t = new TextRange(InputPoem.Document.ContentStart,
                 InputPoem.Document.ContentEnd);
             File.WriteAllText(filename, t.Text);
@@ -40,6 +42,7 @@ namespace PoemGenerator
 
         private void ReadScript(string filename)
         {
+            if (string.IsNullOrEmpty(filename)) return;
             var scriptText = File.ReadAllLines(filename);
             foreach (var line in scriptText)
             {
