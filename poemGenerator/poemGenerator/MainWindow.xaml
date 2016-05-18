@@ -77,6 +77,7 @@
         </RichTextBox>
         <Button x:Name="AppendToDictionary" Content="Append" HorizontalAlignment="Left" Height="46" Margin="326,375,0,0" VerticalAlignment="Top" Width="148" Click="appendToDictionary_Click" Grid.ColumnSpan="2" Visibility="Hidden" IsManipulationEnabled="True" ClickMode="Press" />
         <Button x:Name="GeneratePoem" Content="generate poem" HorizontalAlignment="Left" Height="45" Margin="326,376,0,0" VerticalAlignment="Top" Width="148" Click="GeneratePoemButtonClick1" Grid.ColumnSpan="2" FontFamily="Script MT Bold" FontSize="17.333"/>
+        <DataGrid x:Name="editDictionary" HorizontalAlignment="Left" Height="113" Margin="31,496,0,0" VerticalAlignment="Top" Width ="745" Visibility="Hidden" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
